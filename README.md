@@ -3,7 +3,6 @@
 Deploy fullstack decentralized applications using AI + decentralized hosting in minutes.
 Microservice for [w3gpt.ai](https://w3gpt.ai) for deploying ICP frontend via ICP canisters and Juno Satelites. Made with Bun & ElysiaJS
 
-
 ## Video Demo
 
 <p align="center">
@@ -65,4 +64,5 @@ dfx deploy
 juno deploy
 ```
 
-Built during Encode x Internet Computer Hackathon
+* Built during Encode x Internet Computer Hackathon
+* For frontend implementation see [Web3 GPT respository](https://github.com/markeljan/web3gpt)
