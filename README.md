@@ -1,15 +1,31 @@
-# Elysia with Bun runtime
+<img width="977" alt="image" src="https://github.com/Markeljan/icp-juno/assets/12901349/9bd3f37c-7517-4c29-b622-afe159f8e67c">
 
-## Getting Started
-To get started with this template, simply paste this command into your terminal:
-```bash
-bun create elysia ./elysia-example
-```
+# Helper for Web3 GPT frontend deployer
 
-## Development
-To start the development server run:
+## Usage
+
 ```bash
+bun i
+
 bun run dev
+
 ```
 
-Open http://localhost:3000/ with your browser to see the result.
+## Elysia server
+
+Server runs on port 4040 and accepts POST requests with body:
+
+```json
+{
+  "sourceCode": "string"
+}
+```
+
+Code is deployed to both ICP (localhost) and Juno using:
+
+```bash
+dfx deploy
+
+juno deploy
+```
+
