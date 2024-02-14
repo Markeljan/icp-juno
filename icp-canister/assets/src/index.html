@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ICPX Token Minting</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.6.0/web3.min.js"></script>
+</head>
+<body>
+    <h2>ICPX Token Minting</h2>
+    <label for="mintAmount">Amount to Mint:</label>
+    <input type="number" id="mintAmount" name="mintAmount" value="1" min="1" step="1">
+    <button onclick="mintToken()">Mint</button>
+
+    <script>
+        // Assuming MetaMask is installed
+        if (window.ethereum) {
+            // New web3 instance
+            const web3 = new Web3(window.ethereum);
+            // Prompt user for account connections
+            window.ethereum.request({ method: 'eth_requestAccounts' });
+
+            const contractAddress = 'undefined'; // Replace with your contract's address
+            const contractABI = undefined; // Replace with your contract's ABI
+
+            const contract = new web3.eth.Contract(contractABI, contractAddress);
+
+            async function mintToken() {
+                const accounts = await web3.eth.getAccounts();
+                const mintAmount = document.getElementById('mintAmount').value;
+                const amountToMint = web3.utils.toWei(mintAmount, 'ether'); // Assuming you want to mint using ether units
+
+                contract.methods.mint(accounts[0], amountToMint).send({from: accounts[0]})
+                .then(function(receipt) {
+                    alert(`Minting successful. Transaction Hash: ${receipt.transactionHash}`);
+                })
+                .catch(function(error) {
+                    alert(`Minting failed: ${error.message}`);
+                });
+            }
+        } else {
+            alert('Please install MetaMask to use this feature.');
+        }
+    </script>
+</body>
+</html>
