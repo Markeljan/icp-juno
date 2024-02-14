@@ -1,7 +1,9 @@
 # Fullstack AI Dapp Builder
 
 Deploy fullstack decentralized applications using AI.  ICP & Juno decentralized frontend hosting.
-Microservice for [w3gpt.ai](https://w3gpt.ai) for deploying ICP frontend via ICP canisters and Juno Satelites. Made with Bun & ElysiaJS
+
+Backend service for [w3gpt.ai](https://w3gpt.ai) for deploying ICP canisters and Juno Satelites. 
+
 
 ## Video Demo
 
