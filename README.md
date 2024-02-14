@@ -1,6 +1,6 @@
 <img width="400" alt="image" src="https://github.com/Markeljan/icp-juno/assets/12901349/9bd3f37c-7517-4c29-b622-afe159f8e67c">
 
-# Deploy decentralized AI generated frontends to ICP & Juno
+# ICP & Juno Frontend deployment service
 
 ## Usage
 
